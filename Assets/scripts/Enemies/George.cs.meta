@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 4979e3a0b5c006e468bb4dd8dbaa2d0f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ChainLink: {fileID: 3176111395499693730, guid: 0b323bc9d93903f48b03a2d694efb2e6, type: 3}
+  - GeorgeMine: {fileID: 7258692192425511162, guid: 9491b6582e28de04d96612774a5c8f87, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
