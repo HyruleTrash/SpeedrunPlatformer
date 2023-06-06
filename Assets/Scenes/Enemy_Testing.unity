@@ -222,6 +222,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Motion: {x: 0, y: 0, z: 0}
   SpeedModif: 1
+--- !u!1 &607769445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5873279246486324268, guid: 4126782ca564c4b9faacd327a04f14f3, type: 3}
+  m_PrefabInstance: {fileID: 5873279246309167661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1345062744
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +387,50 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 401466819}
+    - target: {fileID: 5873279245696091309, guid: 4126782ca564c4b9faacd327a04f14f3, type: 3}
+      propertyPath: Indicator
+      value: 
+      objectReference: {fileID: 607769445}
+    - target: {fileID: 5873279245696091309, guid: 4126782ca564c4b9faacd327a04f14f3, type: 3}
+      propertyPath: JumpSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873279245696091309, guid: 4126782ca564c4b9faacd327a04f14f3, type: 3}
+      propertyPath: Sprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873279245696091309, guid: 4126782ca564c4b9faacd327a04f14f3, type: 3}
+      propertyPath: Sprites.Array.data[0].name
+      value: MouthOpen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873279245696091309, guid: 4126782ca564c4b9faacd327a04f14f3, type: 3}
+      propertyPath: Sprites.Array.data[1].name
+      value: MouthCloseRetreat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873279245696091309, guid: 4126782ca564c4b9faacd327a04f14f3, type: 3}
+      propertyPath: Sprites.Array.data[2].name
+      value: MouthCloseWait
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873279245696091309, guid: 4126782ca564c4b9faacd327a04f14f3, type: 3}
+      propertyPath: Sprites.Array.data[3].name
+      value: MouthCloseStruggling
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873279245696091309, guid: 4126782ca564c4b9faacd327a04f14f3, type: 3}
+      propertyPath: Sprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: beac350cb04bd2d4c989e867047b1957, type: 3}
+    - target: {fileID: 5873279245696091309, guid: 4126782ca564c4b9faacd327a04f14f3, type: 3}
+      propertyPath: Sprites.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ab5bcf82b962cb244933ec94fd219e38, type: 3}
+    - target: {fileID: 5873279245696091309, guid: 4126782ca564c4b9faacd327a04f14f3, type: 3}
+      propertyPath: Sprites.Array.data[2].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d8fa871ec3df80e4cbe45675984f2a6a, type: 3}
+    - target: {fileID: 5873279245696091309, guid: 4126782ca564c4b9faacd327a04f14f3, type: 3}
+      propertyPath: Sprites.Array.data[3].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d8fa871ec3df80e4cbe45675984f2a6a, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4126782ca564c4b9faacd327a04f14f3, type: 3}
