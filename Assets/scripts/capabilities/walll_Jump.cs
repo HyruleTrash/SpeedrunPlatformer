@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class walllJump : MonoBehaviour
+public class walll_Jump : MonoBehaviour
 {
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
-    private bool isWallSliding;
+    public bool isWallSliding;
     private float wallSlidingSpeed = 2f;
 
     private float horizontal;
