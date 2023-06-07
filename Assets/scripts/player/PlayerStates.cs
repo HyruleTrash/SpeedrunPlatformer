@@ -7,6 +7,7 @@ public class PlayerStates : MonoBehaviour
     public Animator Player;
     private Rigidbody2D rb;
     private Ground ground;
+    private walllJump walljump;
 
     private bool onGround;
     private bool up;
@@ -21,6 +22,7 @@ public class PlayerStates : MonoBehaviour
 
     void Update()
     {
+        bool isWalled = walljump.IsWalled();
         onGround = ground.GetOnGround();
         float currentY = transform.position.y;
 
@@ -38,6 +40,7 @@ public class PlayerStates : MonoBehaviour
         //change to idle
         if (rb.velocity.magnitude > 0 && onGround)
         {
+            Player.ResetTrigger("wall");
             Player.ResetTrigger("down");
             Player.ResetTrigger("idle");
             Player.SetTrigger("run");
@@ -46,6 +49,7 @@ public class PlayerStates : MonoBehaviour
         //change to run
         else if (rb.velocity.magnitude <= 0 && onGround)
         {
+            Player.ResetTrigger("wall");
             Player.ResetTrigger("down");
             Player.ResetTrigger("run");
             Player.SetTrigger("idle");
@@ -53,6 +57,7 @@ public class PlayerStates : MonoBehaviour
         //change to up
         else if (!onGround && up)
         {
+            Player.ResetTrigger("wall");
             Player.ResetTrigger("run");
             Player.ResetTrigger("idle");
             Player.SetTrigger("up");
@@ -60,10 +65,19 @@ public class PlayerStates : MonoBehaviour
         //change to down
         else if (!onGround && !up) 
         {
+            Player.ResetTrigger("wall");
             Player.ResetTrigger("run");
             Player.ResetTrigger("idle");
             Player.ResetTrigger("up");
             Player.SetTrigger("down");
+        }
+        else if (isWalled)
+        {
+            Player.ResetTrigger("run");
+            Player.ResetTrigger("idle");
+            Player.ResetTrigger("up");
+            Player.ResetTrigger("down");
+            Player.SetTrigger("wall");
         }
     }
 }

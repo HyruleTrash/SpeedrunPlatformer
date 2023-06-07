@@ -45,7 +45,7 @@ public class walllJump : MonoBehaviour
         onGround = ground.GetOnGround();
     }
 
-    private bool IsWalled()
+    public bool IsWalled()
     {
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
     }
