@@ -22,10 +22,6 @@ public class walllJump : MonoBehaviour
     private float wallJumpingDuration = 0.4f;
     private Vector2 wallJumpingPower = new Vector2(8f, 16f);
 
-    public GameObject grappleGun;
-    public GameObject pivotPoint;
-
-
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
