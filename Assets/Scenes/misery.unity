@@ -5613,18 +5613,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.01}
+  m_Offset: {x: 0, y: -0.08877069}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.845477}
   m_EdgeRadius: 0
 --- !u!212 &1085460992
 SpriteRenderer:
@@ -5667,8 +5667,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: eceed7429ef314da78b28d235dcf6f5f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5703,7 +5703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: 3d8251d5b980f470c9a130ad6c550af5, type: 2}
-  maxSpeed: 4
+  maxSpeed: 8
   maxAcceleration: 35
   maxAirAcceleration: 20
 --- !u!68 &1085460995
@@ -5741,7 +5741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: 3d8251d5b980f470c9a130ad6c550af5, type: 2}
-  jumpheight: 3
+  jumpheight: 6
   maxAirJumps: 0
   downwardMovementMultiplier: 3
   upMovementMultiplier: 3
@@ -5762,7 +5762,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 5
+  m_Distance: 5.0175257
   m_DampingRatio: 1
   m_Frequency: 1
 --- !u!114 &1085460998
@@ -5794,8 +5794,6 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 8
-  grappleGun: {fileID: 1783752229}
-  pivotPoint: {fileID: 455114751}
 --- !u!1 &1434113045
 GameObject:
   m_ObjectHideFlags: 0
@@ -5820,7 +5818,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434113045}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.419, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
