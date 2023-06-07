@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: GeorgeHolder
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: d49775908d51a754db8d569d74df2bf1, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -45,6 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4979e3a0b5c006e468bb4dd8dbaa2d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Lenght: 1
+  ChainLink: {fileID: 0}
+  GeorgeMine: {fileID: 0}
+  ChainLinkLenght: 0.44
+  GeorgeMineOffset: 0.94
 --- !u!1 &1629440162878405112
 GameObject:
   m_ObjectHideFlags: 0
