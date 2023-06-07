@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class walllJump : MonoBehaviour
+public class walll_Jump : MonoBehaviour
 {
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
-    private bool isWallSliding;
+    public bool isWallSliding;
     private float wallSlidingSpeed = 2f;
 
     private float horizontal;
@@ -45,7 +45,7 @@ public class walllJump : MonoBehaviour
         onGround = ground.GetOnGround();
     }
 
-    public bool IsWalled()
+    private bool IsWalled()
     {
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
     }

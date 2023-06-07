@@ -7,7 +7,7 @@ public class PlayerStates : MonoBehaviour
     public Animator Player;
     private Rigidbody2D rb;
     private Ground ground;
-    private walllJump walljump;
+    private walll_Jump walljump;
 
     private bool onGround;
     private bool up;
@@ -18,13 +18,14 @@ public class PlayerStates : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
+        walljump = GetComponent<walll_Jump>();
     }
 
     void Update()
     {
-        bool isWalled = walljump.IsWalled();
         onGround = ground.GetOnGround();
         float currentY = transform.position.y;
+        bool issliding = walljump.isWallSliding;
 
         //check y
         if (currentY > lasty)
@@ -65,19 +66,18 @@ public class PlayerStates : MonoBehaviour
         //change to down
         else if (!onGround && !up) 
         {
-            Player.ResetTrigger("wall");
             Player.ResetTrigger("run");
             Player.ResetTrigger("idle");
             Player.ResetTrigger("up");
             Player.SetTrigger("down");
         }
-        else if (isWalled)
+        if (walljump != null && issliding == true)
         {
+            Player.SetTrigger("wall");
             Player.ResetTrigger("run");
             Player.ResetTrigger("idle");
             Player.ResetTrigger("up");
             Player.ResetTrigger("down");
-            Player.SetTrigger("wall");
         }
     }
 }
