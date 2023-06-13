@@ -31,6 +31,14 @@ public class GrappleGun : MonoBehaviour
     [SerializeField] private bool hasMaxDistance = false;
     [SerializeField] private float maxDistnace = 20;
 
+    [Header("GrappleGunSprites")]
+    private SpriteRenderer sprite;
+    [SerializeField]public Sprite grappled;
+    [SerializeField]public Sprite ungrappled;
+    [SerializeField] public GameObject Hook;
+    private GameObject instance;
+    private bool arting = false;
+
     private enum LaunchType
     {
         Transform_Launch,
@@ -54,6 +62,7 @@ public class GrappleGun : MonoBehaviour
     {
         grappleRope.enabled = false;
         m_springJoint2D.enabled = false;
+        sprite = GetComponent<SpriteRenderer>();
 
     }
 
@@ -77,6 +86,7 @@ public class GrappleGun : MonoBehaviour
 
             if (launchToPoint && grappleRope.isGrappling)
             {
+                Art();
                 if (launchType == LaunchType.Transform_Launch)
                 {
                     Vector2 firePointDistnace = firePoint.position - gunHolder.localPosition;
@@ -90,6 +100,12 @@ public class GrappleGun : MonoBehaviour
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
             m_rigidbody.gravityScale = 1;
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            sprite.sprite = ungrappled;
+            Destroy(instance.gameObject);
+            arting = false;
         }
         else
         {
@@ -128,6 +144,16 @@ public class GrappleGun : MonoBehaviour
                     grappleRope.enabled = true;
                 }
             }
+        }
+    }
+
+    public void Art()
+    {
+        if (!arting)
+        {
+            arting = true;
+            sprite.sprite = grappled;
+            instance = Instantiate(Hook, grapplePoint, gunPivot.rotation);
         }
     }
 

@@ -6124,8 +6124,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783752229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.52, y: 0.01, z: 0}
-  m_LocalScale: {x: 0.5465417, y: 0.1458128, z: 1}
+  m_LocalPosition: {x: 1.22, y: -0.081, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 455114752}
@@ -6157,6 +6157,9 @@ MonoBehaviour:
   rotationSpeed: 18.3
   hasMaxDistance: 0
   maxDistnace: 5
+  grappled: {fileID: 21300000, guid: 9ff474c9c94ae6a458a190718bf94df0, type: 3}
+  ungrappled: {fileID: 21300000, guid: 2081f330ec7107c42ad8545911c220b7, type: 3}
+  Hook: {fileID: 1717347878316932999, guid: b159748eca743461b969073142b9558e, type: 3}
   launchToPoint: 1
   launchType: 1
   launchSpeed: 1.13
@@ -6232,7 +6235,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2081f330ec7107c42ad8545911c220b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

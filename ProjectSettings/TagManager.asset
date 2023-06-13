@@ -13,7 +13,7 @@ TagManager:
   - Water
   - UI
   - collectables
-  - 
+  - Hook
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: epicer
+    uniqueID: 70915911
     locked: 0
