@@ -32,6 +32,19 @@ public class Ground : MonoBehaviour
             Vector2 normal = collision.GetContact(i).normal;
             onGround = normal.y >= 0.9f;
         }
+
+        switch (collision.gameObject.tag)
+        {
+            case "clam":
+                // trigger eating in clam
+                break;
+            case "spike":
+                // lower o2 by amount
+                break;
+            case "george":
+                // trigger explosion
+                break;
+        }
     }
 
     //private void RetrieveFriction(Collision2D collision)
