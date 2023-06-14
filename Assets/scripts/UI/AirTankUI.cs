@@ -12,6 +12,8 @@ public class AirTankUI : MonoBehaviour
 
     private float lastDecreaseTime;
 
+    public float increaseOxy;
+
 
     void Start()
     {
@@ -26,7 +28,21 @@ public class AirTankUI : MonoBehaviour
         if (Time.time - lastDecreaseTime >= 0.5f)
         {
             oxy = oxy - decreaseAmount;
-            lastDecreaseTime = Time.time; // Update the last decrease time
+            lastDecreaseTime = Time.time;
+        }
+        //death
+        if (oxy <= 0)
+        {
+            //do the death
+        }
+    }
+
+    public void gainOxy()
+    {
+        oxy = oxy + increaseOxy;
+        if (oxy > 100f)
+        {
+            oxy = 100;
         }
     }
 }

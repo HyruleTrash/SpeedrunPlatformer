@@ -10,12 +10,11 @@ public class pickUp : MonoBehaviour
     private bool collecting = false;
     public ParticleSystem particle;
     public TextMeshProUGUI ShellText;
-
-    private void Awake()
+    public float oxygen;
+    public AirTankUI airTankUI;
+    private void Start()
     {
-
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("seaShell") && !collecting)
@@ -25,13 +24,20 @@ public class pickUp : MonoBehaviour
             Destroy(collision.gameObject);
             seaShellCount++;
             ShellText.text = System.Convert.ToString(seaShellCount);
-            Debug.Log(seaShellCount);
+        }
+        if (collision.gameObject.CompareTag("AirTank") && !collecting)
+        {
+            collecting = true;
+            Instantiate(particle, collision.gameObject.transform.position, Quaternion.identity);
+            Destroy(collision.gameObject);
+            airTankUI.gainOxy();
         }
     }
 
     void Update()
     {
-        collecting = false;    
+        collecting = false;   
+        
     }
 }
 
