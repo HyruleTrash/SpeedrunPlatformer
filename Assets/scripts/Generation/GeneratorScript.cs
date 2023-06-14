@@ -39,33 +39,7 @@ public class GeneratorScript : MonoBehaviour
         // load three start level chunks
         for (int i = 0; i < 3; i++)
         {
-            // get data for levels
-            int themeID = GetIdFromTheme(currentTheme);
-            int gottenId = Random.Range(0, Levels[themeID].Level.Length);
-            LevelChunk gottenLevel = Levels[themeID].Level[gottenId];
-
-            // make sure level fits
-            while (gottenLevel.Difficulty != currentDifficulty && gottenId == lastLevelId)
-            {
-                gottenId = Random.Range(0, Levels[themeID].Level.Length);
-                gottenLevel = Levels[themeID].Level[gottenId];
-                if (gottenLevel.Difficulty == currentDifficulty && gottenId != lastLevelId)
-                {
-                    break;
-                }
-            }
-
-            // set found level and instantiate
-            lastLevelId = gottenId;
-            GameObject LevelInstance = Instantiate(gottenLevel.LevelObject, new Vector3(distance, 0, 0), new Quaternion(), transform);
-
-            // set LevelData
-            LevelInstance.GetComponent<LevelInfo>().Difficulty = Levels[themeID].Level[gottenId].Difficulty;
-            LevelInstance.GetComponent<LevelInfo>().theme = Levels[themeID].Level[gottenId].theme;
-            LevelInstance.GetComponent<LevelInfo>().sizeW = Levels[themeID].Level[gottenId].sizeW;
-
-            // set distance
-            distance += gottenLevel.sizeW + 1;
+            GenerateNewLevelChunk();
         }
     }
 
@@ -110,6 +84,7 @@ public class GeneratorScript : MonoBehaviour
         LevelInstance.GetComponent<LevelInfo>().Difficulty = Levels[themeID].Level[gottenId].Difficulty;
         LevelInstance.GetComponent<LevelInfo>().theme = Levels[themeID].Level[gottenId].theme;
         LevelInstance.GetComponent<LevelInfo>().sizeW = Levels[themeID].Level[gottenId].sizeW;
+        LevelInstance.GetComponent<LevelInfo>().Player = Player;
 
         // set distance
         distance += gottenLevel.sizeW + 1;

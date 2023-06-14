@@ -41,8 +41,9 @@ public class Ground : MonoBehaviour
             case "spike":
                 // lower o2 by amount
                 break;
-            case "george":
+            case "George":
                 // trigger explosion
+                collision.gameObject.GetComponent<GeorgeExplosion>().Explode();
                 break;
         }
     }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3176111395499693742}
   - component: {fileID: 3176111395499693741}
   - component: {fileID: 6387429040640675692}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ChainLink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: 813e9e3d5d6e58545a7c3ed8a73c8e6d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -100,7 +100,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.2
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -123,7 +123,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.25, y: 0.4375}
+  m_Size: {x: 0.18, y: 0.43}
   m_Direction: 0
 --- !u!233 &3176111395499693741
 HingeJoint2D:
@@ -132,15 +132,15 @@ HingeJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3176111395499693730}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0.22}
-  m_ConnectedAnchor: {x: 0, y: 0.22}
+  m_Anchor: {x: 0, y: -0.22}
+  m_ConnectedAnchor: {x: 0, y: -0.22}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -156,7 +156,7 @@ DistanceJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3176111395499693730}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 0}
@@ -166,5 +166,5 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 1
+  m_Distance: 0.005
   m_MaxDistanceOnly: 0

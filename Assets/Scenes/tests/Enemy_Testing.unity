@@ -389,6 +389,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 352146498719614769, guid: 16d7f61e29858624daded5e821ee4868, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 401466819}
+    - target: {fileID: 352146498719614769, guid: 16d7f61e29858624daded5e821ee4868, type: 3}
       propertyPath: ChainLink
       value: 
       objectReference: {fileID: 3176111395499693730, guid: 0b323bc9d93903f48b03a2d694efb2e6, type: 3}
@@ -447,6 +451,18 @@ PrefabInstance:
     - target: {fileID: 1629440162615663299, guid: 16d7f61e29858624daded5e821ee4868, type: 3}
       propertyPath: m_Name
       value: GeorgeHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629440162878405115, guid: 16d7f61e29858624daded5e821ee4868, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629440162878405115, guid: 16d7f61e29858624daded5e821ee4868, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629440162878405115, guid: 16d7f61e29858624daded5e821ee4868, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

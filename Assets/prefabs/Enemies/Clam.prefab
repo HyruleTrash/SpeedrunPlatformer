@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5873279245696091218}
   - component: {fileID: 5873279245696091309}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Clam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5873279246255494746}
   - component: {fileID: 5873279246255494741}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5873279246486324271}
   - component: {fileID: 5873279246486324270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Indecator
   m_TagString: Untagged
   m_Icon: {fileID: 0}

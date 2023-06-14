@@ -17,10 +17,10 @@ TagManager:
   - UI
   - collectables
   - Hook
-  - 
-  - 
-  - 
-  - 
+  - NonPlayerObjects
+  - Player
+  - ScreenEdge
+  - BackgroundPhysics
   - 
   - 
   - 
