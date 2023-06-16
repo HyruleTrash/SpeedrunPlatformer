@@ -7,6 +7,8 @@ public class Ground : MonoBehaviour
     private bool onGround;
     private float friction;
 
+    public GameObject oxTank;
+    public Collision2D lastCollided;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         EvaluateCollision(collision);
@@ -21,13 +23,25 @@ public class Ground : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        if (lastCollided == collision)
+        {
+            switch (collision.gameObject.tag)
+            {
+                case "Spike":
+                    // lower o2 speed
+                    oxTank.GetComponent<AirTankUI>().decreaseAmount = 1;
+                    break;
+            }
+            lastCollided = null;
+        }
         onGround = false;
         friction = 0;
     }
 
     private void EvaluateCollision(Collision2D collision)
     {
-        for(int i=0; i < collision.contactCount; i++)
+        lastCollided = collision;
+        for (int i=0; i < collision.contactCount; i++)
         {
             Vector2 normal = collision.GetContact(i).normal;
             onGround = normal.y >= 0.9f;
@@ -38,8 +52,9 @@ public class Ground : MonoBehaviour
             case "clam":
                 // trigger eating in clam
                 break;
-            case "spike":
-                // lower o2 by amount
+            case "Spike":
+                // engage o2 speed
+                oxTank.GetComponent<AirTankUI>().decreaseAmount = 5;
                 break;
             case "George":
                 // trigger explosion
