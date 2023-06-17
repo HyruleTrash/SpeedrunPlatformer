@@ -7,10 +7,12 @@ public class Clam : MonoBehaviour
 {
     public GameObject player;
     public GameObject Indicator;
+
+    [Header("Size parameters")]
     public Vector2 EatingOffset;
     public Vector3 MaxJump;
 
-
+    [Header("Speed parameters")]
     public float DetectionDistence = 0.15f;
     public float JumpSpeed = 2f;
     public float DesendSpeed = 1.5f;
@@ -36,6 +38,9 @@ public class Clam : MonoBehaviour
     Death deathLocation;
 
     bool pressingSpace = false;
+    bool hurting = false;
+    float hurtingTime = 0f;
+    public int maxHurtingTime = 1;
 
     public int GetSpriteStateWithName(string name)
     {
@@ -110,18 +115,50 @@ public class Clam : MonoBehaviour
             {
                 transform.position = StartPosition;
             }
+
             if (Eating)
             {
                 player.transform.position = transform.position;
-                GameObject.Find("Clam/Visual").GetComponent<SpriteRenderer>().sprite = Sprites[GetSpriteStateWithName("MouthCloseRetreat")].sprite;
-                // check if struggling
-                if (Input.GetKeyDown("space") && !pressingSpace)
+
+                if (hurting)
                 {
-                    pressingSpace = true;
+                    GameObject.Find("Clam/Visual").GetComponent<SpriteRenderer>().sprite = Sprites[GetSpriteStateWithName("MouthCloseStruggling")].sprite;
+                    hurtingTime += Time.deltaTime;
+                    if (hurtingTime > maxHurtingTime)
+                    {
+                        hurtingTime = 0;
+                        hurting = false;
+                    }
+                }
+                else
+                {
+                    GameObject.Find("Clam/Visual").GetComponent<SpriteRenderer>().sprite = Sprites[GetSpriteStateWithName("MouthCloseRetreat")].sprite;
+                }
+                // check if struggling
+                if (Input.GetKeyDown("space"))
+                {
+                    hurting = true;
+                    if (!pressingSpace)
+                    {
+                        transform.position += new Vector3(0, Time.deltaTime * EatingSpeed * 4, 0);
+                        pressingSpace = true;
+                        currentHealth--;
+                    }
                 }
                 else if (Input.GetKeyUp("space") && pressingSpace)
                 {
                     pressingSpace = false;
+                }
+
+                // if health is to low let go of player
+                if (currentHealth <= 0)
+                {
+                    Eating = false;
+                    player.gameObject.GetComponent<Ground>().justHit = true;
+                    player.gameObject.GetComponent<Ground>().currentInvisTime = player.gameObject.GetComponent<Ground>().maxInvisTime;
+                    player.SetActive(true);
+                    player.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                    currentHealth = maxHealth;
                 }
 
                 // go down and if its to far down kill the player

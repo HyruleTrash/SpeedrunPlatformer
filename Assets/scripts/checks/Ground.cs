@@ -12,7 +12,7 @@ public class Ground : MonoBehaviour
     [Header("Invisability frames")]
     public bool justHit = false;
     public float maxInvisTime = 5;
-    float currentInvisTime = 0;
+    public float currentInvisTime = 0;
     public float amountOfFramesInFlashColor = 20;
     float currentColorFrameCount = 0;
 
@@ -75,9 +75,12 @@ public class Ground : MonoBehaviour
         {
             case "Clam":
                 // trigger eating in clam
-                gameObject.SetActive(false);
-                gameObject.GetComponent<SpriteRenderer>().enabled = false;
-                collision.transform.parent.gameObject.GetComponent<Clam>().Eating = true;
+                if (!justHit)
+                {
+                    gameObject.SetActive(false);
+                    gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                    collision.transform.parent.gameObject.GetComponent<Clam>().Eating = true;
+                }
                 break;
             case "Spike":
                 // engage o2 speed
