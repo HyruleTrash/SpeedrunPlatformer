@@ -30,7 +30,7 @@ public class GeneratorScript : MonoBehaviour
     string currentTheme = "";
     int distance = 0;
     int lastLevelId = -1;
-
+    List<bool> generating = new List<bool>();
     private void Start()
     {
         // pick random theme for start
@@ -52,14 +52,18 @@ public class GeneratorScript : MonoBehaviour
             if (transform.GetChild(i).gameObject.GetComponent<LevelInfo>().sizeW + transform.GetChild(i).transform.position.x + 4 < Camera.transform.GetChild(0).transform.position.x)
             {
                 Destroy(transform.GetChild(i).gameObject);
-                GenerateNewLevelChunk();
             }
+        }
+        if (distance < Camera.transform.GetChild(1).transform.position.x && !generating.Contains(true))
+        {
+            GenerateNewLevelChunk();
         }
     }
 
     //creates a new chunk
     public void GenerateNewLevelChunk()
     {
+        generating.Add(true);
         // get data for levels
         int themeID = GetIdFromTheme(currentTheme);
         int gottenId = Random.Range(0, Levels[themeID].Level.Length);
@@ -88,6 +92,7 @@ public class GeneratorScript : MonoBehaviour
 
         // set distance
         distance += gottenLevel.sizeW + 1;
+        generating.Remove(true);
     }
 
     // gets the id of the corresponding theme

@@ -98,8 +98,14 @@ public class GrappleGun : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             grappleRope.enabled = false;
-            m_springJoint2D.enabled = false;
-            m_rigidbody.gravityScale = 1;
+            if (m_springJoint2D != null)
+            {
+                m_springJoint2D.enabled = false;
+            }
+            if (m_rigidbody != null)
+            {
+                m_rigidbody.gravityScale = 1;
+            }
         }
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {

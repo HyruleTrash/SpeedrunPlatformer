@@ -54,6 +54,8 @@ MonoBehaviour:
   JumpSpeed: 20
   DesendSpeed: 1.5
   EatingSpeed: 1.5
+  maxHealth: 5
+  currentHealth: 0
   Sprites:
   - name: MouthOpen
     sprite: {fileID: 21300000, guid: beac350cb04bd2d4c989e867047b1957, type: 3}
@@ -62,7 +64,7 @@ MonoBehaviour:
   - name: MouthCloseWait
     sprite: {fileID: 21300000, guid: d8fa871ec3df80e4cbe45675984f2a6a, type: 3}
   - name: MouthCloseStruggling
-    sprite: {fileID: 21300000, guid: d8fa871ec3df80e4cbe45675984f2a6a, type: 3}
+    sprite: {fileID: 21300000, guid: 7cec25134d7cbb649920c8dbc1654911, type: 3}
   JumpCurve:
     serializedVersion: 2
     m_Curve:
@@ -97,6 +99,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   Eating: 0
+  maxHurtingTime: 1
 --- !u!1 &5873279246255494747
 GameObject:
   m_ObjectHideFlags: 0
