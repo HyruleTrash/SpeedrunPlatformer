@@ -22,8 +22,6 @@ public class walll_Jump : MonoBehaviour
     private float wallJumpingDuration = 0.4f;
     private Vector2 wallJumpingPower = new Vector2(8f, 16f);
 
-    public AudioSource jump;
-
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -83,7 +81,6 @@ public class walll_Jump : MonoBehaviour
         if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
         {
             isWallJumping = true;
-            //jump.Play();
             body.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
             wallJumpingCounter = 0f;
 

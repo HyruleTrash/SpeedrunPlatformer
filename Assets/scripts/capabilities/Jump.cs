@@ -20,8 +20,6 @@ public class Jump : MonoBehaviour
     private bool desiredJump;
     private bool onGround;
 
-    public AudioSource jump;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -74,7 +72,6 @@ public class Jump : MonoBehaviour
     {
         if(onGround || jumpPhase < maxAirJumps)
         {
-            jump.Play();
             jumpPhase += 1;
             float jumpSpeed = Mathf.Sqrt(-2f * Physics2D.gravity.y * jumpheight);
             if (velocity.y > 0f)
