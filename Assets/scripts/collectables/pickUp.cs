@@ -12,8 +12,6 @@ public class pickUp : MonoBehaviour
     public TextMeshProUGUI ShellText;
     public float oxygen;
     public AirTankUI airTankUI;
-
-    public AudioSource picker;
     private void Start()
     {
     }
@@ -22,7 +20,6 @@ public class pickUp : MonoBehaviour
         if (collision.gameObject.CompareTag("seaShell") && !collecting)
         {
             collecting = true;
-            picker.Play();
             Instantiate(particle, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             seaShellCount++;
@@ -31,7 +28,6 @@ public class pickUp : MonoBehaviour
         if (collision.gameObject.CompareTag("AirTank") && !collecting)
         {
             collecting = true;
-            picker.Play();
             Instantiate(particle, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             airTankUI.gainOxy();
