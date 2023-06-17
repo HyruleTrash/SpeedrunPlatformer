@@ -18,12 +18,11 @@ public class Death : MonoBehaviour
         AppHelper.Quit();
     }
 
-    public void TriggerDeathFade()
+    public void TriggerDeath()
     {
         player.GetComponent<Move>().enabled = false;
         player.GetComponent<Jump>().enabled = false;
         player.GetComponent<SpriteRenderer>().color = Color.red;
-        transform.GetComponent<Animator>().SetTrigger("Died");
         player.GetComponent<BoxCollider2D>().enabled = false;
         player.GetComponent<pickUp>().enabled = false;
         player.GetComponent<walll_Jump>().enabled = false;
@@ -31,5 +30,10 @@ public class Death : MonoBehaviour
         player.GetComponent<PlayerStates>().enabled = false;
         Destroy(player.GetComponent<SpringJoint2D>());
         Destroy(player.GetComponent<Rigidbody2D>());
+    }
+
+    public void TriggerDeathFade()
+    {
+        transform.GetComponent<Animator>().SetTrigger("Died");
     }
 }

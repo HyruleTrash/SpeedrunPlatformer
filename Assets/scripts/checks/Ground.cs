@@ -7,8 +7,44 @@ public class Ground : MonoBehaviour
     private bool onGround;
     private float friction;
 
+    public Vector2 hitForce = new Vector2(-600, -500);
+
+    [Header("Invisability frames")]
+    public bool justHit = false;
+    public float maxInvisTime = 5;
+    float currentInvisTime = 0;
+    public float amountOfFramesInFlashColor = 20;
+    float currentColorFrameCount = 0;
+
     public GameObject oxTank;
-    public Collision2D lastCollided;
+
+    private void Update()
+    {
+        if (justHit)
+        {
+            currentInvisTime -= Time.deltaTime;
+            if (currentInvisTime <= 0)
+            {
+                justHit = false;
+                gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            }
+
+            currentColorFrameCount += Time.deltaTime;
+            if (currentColorFrameCount > amountOfFramesInFlashColor)
+            {
+                if (gameObject.GetComponent<SpriteRenderer>().color == Color.white)
+                {
+                    gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                }
+                else
+                {
+                    gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+                }
+                currentColorFrameCount = 0;
+            }
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         EvaluateCollision(collision);
@@ -23,24 +59,12 @@ public class Ground : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (lastCollided == collision)
-        {
-            switch (collision.gameObject.tag)
-            {
-                case "Spike":
-                    // lower o2 speed
-                    oxTank.GetComponent<AirTankUI>().decreaseAmount = 1;
-                    break;
-            }
-            lastCollided = null;
-        }
         onGround = false;
         friction = 0;
     }
 
     private void EvaluateCollision(Collision2D collision)
     {
-        lastCollided = collision;
         for (int i=0; i < collision.contactCount; i++)
         {
             Vector2 normal = collision.GetContact(i).normal;
@@ -49,12 +73,22 @@ public class Ground : MonoBehaviour
 
         switch (collision.gameObject.tag)
         {
-            case "clam":
+            case "Clam":
                 // trigger eating in clam
+                gameObject.SetActive(false);
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                collision.transform.parent.gameObject.GetComponent<Clam>().Eating = true;
                 break;
             case "Spike":
                 // engage o2 speed
-                oxTank.GetComponent<AirTankUI>().decreaseAmount = 5;
+                Vector2 forceDirection = (collision.GetContact(0).point - new Vector2(transform.position.x, transform.position.y)).normalized;
+                if (!justHit)
+                {
+                    justHit = true;
+                    currentInvisTime = maxInvisTime;
+                    oxTank.GetComponent<AirTankUI>().oxy -= 10;
+                }
+                gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(forceDirection.x * hitForce.x, forceDirection.y * hitForce.y));
                 break;
             case "George":
                 // trigger explosion

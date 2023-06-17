@@ -14,9 +14,11 @@ public class AirTankUI : MonoBehaviour
 
     public float increaseOxy;
 
+    Death deathLocation;
 
     void Start()
     {
+        deathLocation = GameObject.Find("FadeToBlack").GetComponent<Death>();
         oxybar = GetComponent<Image>();
         lastDecreaseTime = Time.time; 
     }
@@ -34,6 +36,8 @@ public class AirTankUI : MonoBehaviour
         if (oxy <= 0)
         {
             //do the death
+            deathLocation.TriggerDeath();
+            deathLocation.TriggerDeathFade();
         }
     }
 

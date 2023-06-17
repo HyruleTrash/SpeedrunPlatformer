@@ -294,6 +294,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0354df3bf7e1641098eb751cd90ca33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitForce: {x: -500, y: -300}
+  justHit: 0
+  maxInvisTime: 3
+  amountOfFramesInFlashColor: 0.125
   oxTank: {fileID: 2095532805}
 --- !u!114 &10214580
 MonoBehaviour:
@@ -1531,6 +1535,10 @@ MonoBehaviour:
       Difficulty: 0
       theme: Default
       sizeW: 26
+    - LevelObject: {fileID: 3076251655491534307, guid: a20a4f7d41568c1489240e9594508a97, type: 3}
+      Difficulty: 0
+      theme: Default
+      sizeW: 10
   Player: {fileID: 10214571}
   Camera: {fileID: 94117268}
 --- !u!1 &1029699328

@@ -25,6 +25,7 @@ public class GeorgeExplosion : MonoBehaviour
             Destroy(transform.GetComponent<Rigidbody2D>());
             gameObject.tag = "Untagged";
             played = true;
+            deathLocation.TriggerDeath();
         }
     }
 

@@ -104,7 +104,10 @@ public class GrappleGun : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             sprite.sprite = ungrappled;
-            Destroy(instance.gameObject);
+            if (instance != null)
+            {
+                Destroy(instance.gameObject);
+            }
             arting = false;
         }
         else

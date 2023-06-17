@@ -18,6 +18,10 @@ public class LevelInfo : MonoBehaviour
             {
                 transform.GetChild(3).transform.GetChild(i).GetComponent<George>().Player = Player;
             }
+            if (transform.GetChild(3).transform.GetChild(i).GetComponent<Clam>())
+            {
+                transform.GetChild(3).transform.GetChild(i).GetComponent<Clam>().player = Player;
+            }
         }
     }
 }
