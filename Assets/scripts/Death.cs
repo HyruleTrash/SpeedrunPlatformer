@@ -12,6 +12,15 @@ public class Death : MonoBehaviour
         player = GameObject.Find("player");
     }
 
+    private void Update()
+    {
+        if (player.transform.position.y < -12)
+        {
+            player.transform.position = new Vector3(player.transform.position.x, -13);
+            TriggerDeathFade();
+        }
+    }
+
     public void DeathTransition()
     {
         // change later to scene transition game over
