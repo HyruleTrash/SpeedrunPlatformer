@@ -24,7 +24,15 @@ public class GeneratorScript : MonoBehaviour
 
     public GameObject Player;
     public GameObject Camera;
+    pickUp seaShellCountHolder;
 
+    [System.Serializable]
+    public class ShellDifficulty
+    {
+        public int shellsCollected = 0;
+        public int difficulty = 0;
+    }
+    public ShellDifficulty[] difficulties;
 
     int currentDifficulty = 0;
     string currentTheme = "";
@@ -33,6 +41,9 @@ public class GeneratorScript : MonoBehaviour
     List<bool> generating = new List<bool>();
     private void Start()
     {
+        // set seashallcountholder
+        seaShellCountHolder = Player.GetComponent<pickUp>();
+
         // pick random theme for start
         currentTheme = Levels[Random.Range(0, Levels.Length)].theme;
 
@@ -45,6 +56,16 @@ public class GeneratorScript : MonoBehaviour
 
     private void Update()
     {
+        // set difficulty
+        for (int i = 1; i < difficulties.Length; i++)
+        {
+            if (difficulties[i].shellsCollected > seaShellCountHolder.seaShellCount)
+            {
+                currentDifficulty = difficulties[i - 1].difficulty;
+                break;
+            }
+        }
+
         // loop through existing levels and delete if they are to far away
         int currentChildCount = transform.childCount;
         for (int i = 0; i < currentChildCount; i++)
