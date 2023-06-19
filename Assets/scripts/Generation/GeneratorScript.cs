@@ -34,7 +34,7 @@ public class GeneratorScript : MonoBehaviour
     }
     public ShellDifficulty[] difficulties;
 
-    int currentDifficulty = 0;
+    public int currentDifficulty = 0;
     string currentTheme = "";
     int distance = 0;
     int lastLevelId = -1;
@@ -91,7 +91,7 @@ public class GeneratorScript : MonoBehaviour
         LevelChunk gottenLevel = Levels[themeID].Level[gottenId];
 
         // make sure level fits
-        while (gottenLevel.Difficulty != currentDifficulty && gottenId == lastLevelId)
+        while (gottenLevel.Difficulty != currentDifficulty || gottenId == lastLevelId)
         {
             gottenId = Random.Range(0, Levels[themeID].Level.Length);
             gottenLevel = Levels[themeID].Level[gottenId];
