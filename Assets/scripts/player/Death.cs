@@ -6,10 +6,14 @@ using UnityEngine.SceneManagement;
 public class Death : MonoBehaviour
 {
     GameObject player;
+    public GameObject DeathUI;
+    private PauseMenu puase;
 
     private void Start()
     {
         player = GameObject.Find("player");
+        puase = DeathUI.GetComponent<PauseMenu>();
+        
     }
 
     private void Update()
@@ -24,7 +28,7 @@ public class Death : MonoBehaviour
     public void DeathTransition()
     {
         // change later to scene transition game over
-        AppHelper.Quit();
+        puase.Died();
     }
 
     public void TriggerDeath()
