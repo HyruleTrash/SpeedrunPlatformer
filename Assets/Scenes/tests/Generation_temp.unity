@@ -2675,6 +2675,10 @@ MonoBehaviour:
       Difficulty: 1
       theme: Default
       sizeW: 44
+    - LevelObject: {fileID: 3076251655491534307, guid: 838ee3544be494a30955830c7d47a47b, type: 3}
+      Difficulty: 2
+      theme: Default
+      sizeW: 26
   Player: {fileID: 10214571}
   Camera: {fileID: 94117268}
   difficulties:
