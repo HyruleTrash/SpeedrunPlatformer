@@ -2635,18 +2635,34 @@ MonoBehaviour:
       Difficulty: 0
       theme: Default
       sizeW: 21
-    - LevelObject: {fileID: 3076251655491534307, guid: 74fbe791ec817b542a50c68128925b5d, type: 3}
+    - LevelObject: {fileID: 3076251655491534307, guid: cf2d8f04665af467886743049634f8ba, type: 3}
       Difficulty: 0
       theme: Default
-      sizeW: 26
-    - LevelObject: {fileID: 3076251655491534307, guid: e41ccca62aacf774990e6fe007695745, type: 3}
-      Difficulty: 0
-      theme: Default
-      sizeW: 26
-    - LevelObject: {fileID: 3076251655491534307, guid: a20a4f7d41568c1489240e9594508a97, type: 3}
+      sizeW: 31
+    - LevelObject: {fileID: 3076251655491534307, guid: ee722fd9608884c1a9a9bc7a9dafd103, type: 3}
       Difficulty: 0
       theme: Default
       sizeW: 10
+    - LevelObject: {fileID: 3076251655491534307, guid: 74fbe791ec817b542a50c68128925b5d, type: 3}
+      Difficulty: 1
+      theme: Default
+      sizeW: 26
+    - LevelObject: {fileID: 3076251655491534307, guid: a20a4f7d41568c1489240e9594508a97, type: 3}
+      Difficulty: 1
+      theme: Default
+      sizeW: 10
+    - LevelObject: {fileID: 3076251655491534307, guid: 0eb8d0e2434f44a14b51ced3f9086349, type: 3}
+      Difficulty: 1
+      theme: Default
+      sizeW: 26
+    - LevelObject: {fileID: 3076251655491534307, guid: 4a6f409f925df423db671a902fa4fdda, type: 3}
+      Difficulty: 1
+      theme: Default
+      sizeW: 32
+    - LevelObject: {fileID: 3076251655491534307, guid: e41ccca62aacf774990e6fe007695745, type: 3}
+      Difficulty: 2
+      theme: Default
+      sizeW: 26
   Player: {fileID: 10214571}
   Camera: {fileID: 94117268}
   difficulties:
@@ -3493,7 +3509,7 @@ RectTransform:
   m_GameObject: {fileID: 1367760635}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.88, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 434311859}
