@@ -38,7 +38,7 @@ public class PlayerStates : MonoBehaviour
         }
         lasty = currentY;
 
-        //change to idle
+        //change to run
         if (rb.velocity.magnitude > 0 && onGround)
         {
             Player.ResetTrigger("wall");
@@ -47,7 +47,7 @@ public class PlayerStates : MonoBehaviour
             Player.SetTrigger("run");
 
         }
-        //change to run
+        //change to idle
         else if (rb.velocity.magnitude <= 0 && onGround)
         {
             Player.ResetTrigger("wall");
