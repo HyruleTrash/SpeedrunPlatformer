@@ -2678,7 +2678,7 @@ MonoBehaviour:
     - LevelObject: {fileID: 3076251655491534307, guid: f8196892d6d584522907bbc7ce94eda8, type: 3}
       Difficulty: 2
       theme: Default
-      sizeW: 26
+      sizeW: 52
     - LevelObject: {fileID: 3076251655491534307, guid: 346afe5c299e14929b036e395bedb3ca, type: 3}
       Difficulty: 2
       theme: Default
@@ -2707,6 +2707,14 @@ MonoBehaviour:
       Difficulty: 2
       theme: Default
       sizeW: 10
+    - LevelObject: {fileID: 3076251655491534307, guid: c27fc6d6f00a94ea788989eba9577418, type: 3}
+      Difficulty: 3
+      theme: Default
+      sizeW: 17
+    - LevelObject: {fileID: 3076251655491534307, guid: 9a47b85fc8c824568927a9a3a07310bd, type: 3}
+      Difficulty: 3
+      theme: Default
+      sizeW: 52
   Player: {fileID: 10214571}
   Camera: {fileID: 94117268}
   difficulties:
@@ -16418,28 +16426,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 3784477085338392086}
     m_ColliderPaths:
-    - - X: -240000041
-        Y: -120000100
-      - X: 41
-        Y: -120000100
-      - X: 100
-        Y: -120000041
-      - X: 100
-        Y: 340000041
-      - X: 41
-        Y: 340000100
-      - X: -240000041
-        Y: 340000100
-      - X: -240000100
-        Y: 340000041
-      - X: -240000100
-        Y: -120000041
+    - - X: 0
+        Y: -120000000
+      - X: 0
+        Y: 340000000
+      - X: -240000000
+        Y: 340000000
+      - X: -240000000
+        Y: -120000000
   m_CompositePaths:
     m_Paths:
-    - - {x: -0.0000252, y: -12.00001}
-      - {x: -0.0000252, y: 34.00001}
-      - {x: -24.00001, y: 33.999973}
-      - {x: -23.999975, y: -12.00001}
+    - - {x: -0.000029300001, y: -12}
+      - {x: -0.000029300001, y: 34}
+      - {x: -24, y: 33.999973}
+      - {x: -23.999971, y: -12}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
