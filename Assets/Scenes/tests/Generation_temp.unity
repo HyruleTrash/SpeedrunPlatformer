@@ -2687,10 +2687,6 @@ MonoBehaviour:
       Difficulty: 3
       theme: Default
       sizeW: 26
-    - LevelObject: {fileID: 3076251655491534307, guid: 3481c1689f06d4446842e6a2eb978e1a, type: 3}
-      Difficulty: 3
-      theme: Default
-      sizeW: 95
     - LevelObject: {fileID: 3076251655491534307, guid: cf81c5a0c553743aa9e15d0436a0b25c, type: 3}
       Difficulty: 3
       theme: Default
@@ -2715,6 +2711,22 @@ MonoBehaviour:
       Difficulty: 3
       theme: Default
       sizeW: 52
+    - LevelObject: {fileID: 3076251655491534307, guid: 030db49ae01a14a3282bba5d53e4d7ff, type: 3}
+      Difficulty: 3
+      theme: Default
+      sizeW: 26
+    - LevelObject: {fileID: 3076251655491534307, guid: 3481c1689f06d4446842e6a2eb978e1a, type: 3}
+      Difficulty: 4
+      theme: Default
+      sizeW: 95
+    - LevelObject: {fileID: 3076251655491534307, guid: 1f90b047c1c6349bf8dc0fa49688d64f, type: 3}
+      Difficulty: 4
+      theme: Default
+      sizeW: 56
+    - LevelObject: {fileID: 3076251655491534307, guid: 67ae7ffca587d4c3fa55be17dd35297d, type: 3}
+      Difficulty: 4
+      theme: Default
+      sizeW: 22
   Player: {fileID: 10214571}
   Camera: {fileID: 94117268}
   difficulties:
@@ -2728,7 +2740,7 @@ MonoBehaviour:
     difficulty: 3
   - shellsCollected: 47
     difficulty: 4
-  - shellsCollected: 60
+  - shellsCollected: 999999999
     difficulty: 5
   currentDifficulty: 0
 --- !u!1 &1029699328
