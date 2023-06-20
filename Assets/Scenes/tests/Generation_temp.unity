@@ -2678,7 +2678,11 @@ MonoBehaviour:
     - LevelObject: {fileID: 3076251655491534307, guid: e1287a927e40c4d68b5f6997015524f4, type: 3}
       Difficulty: 2
       theme: Default
-      sizeW: 44
+      sizeW: 52
+    - LevelObject: {fileID: 3076251655491534307, guid: f8196892d6d584522907bbc7ce94eda8, type: 3}
+      Difficulty: 2
+      theme: Default
+      sizeW: 26
     - LevelObject: {fileID: 3076251655491534307, guid: 346afe5c299e14929b036e395bedb3ca, type: 3}
       Difficulty: 2
       theme: Default

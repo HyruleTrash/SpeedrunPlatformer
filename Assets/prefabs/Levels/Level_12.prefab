@@ -506,8 +506,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 70915911
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -6001,7 +6001,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 22
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11162,8 +11162,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: -635385945, guid: feef1cd1ae5e0408282e9fa2d74f12c4, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 3
@@ -11186,8 +11186,8 @@ Tilemap:
     m_Data: {fileID: -1313248169, guid: feef1cd1ae5e0408282e9fa2d74f12c4, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 1572421971, guid: feef1cd1ae5e0408282e9fa2d74f12c4, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -635385945, guid: feef1cd1ae5e0408282e9fa2d74f12c4, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 2008421773, guid: feef1cd1ae5e0408282e9fa2d74f12c4, type: 3}
   - m_RefCount: 3
@@ -12106,6 +12106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3076251655491534333}
   - component: {fileID: 3076251655491534306}
+  - component: {fileID: 6096332389786487188}
   m_Layer: 3
   m_Name: Level_12
   m_TagString: Untagged
@@ -12147,6 +12148,22 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &6096332389786487188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3076251655491534307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcb51ed9961f4346b7dee6335ecfc04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Difficulty: 0
+  theme: 
+  sizeW: 0
+  Player: {fileID: 0}
 --- !u!1 &5134470395114876385
 GameObject:
   m_ObjectHideFlags: 0
