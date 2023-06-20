@@ -2635,10 +2635,6 @@ MonoBehaviour:
       Difficulty: 0
       theme: Default
       sizeW: 21
-    - LevelObject: {fileID: 3076251655491534307, guid: cf2d8f04665af467886743049634f8ba, type: 3}
-      Difficulty: 0
-      theme: Default
-      sizeW: 31
     - LevelObject: {fileID: 3076251655491534307, guid: 2fb884748f23a4f38a5a158115cf779f, type: 3}
       Difficulty: 0
       theme: Default
@@ -2647,10 +2643,6 @@ MonoBehaviour:
       Difficulty: 1
       theme: Default
       sizeW: 26
-    - LevelObject: {fileID: 3076251655491534307, guid: a20a4f7d41568c1489240e9594508a97, type: 3}
-      Difficulty: 1
-      theme: Default
-      sizeW: 10
     - LevelObject: {fileID: 3076251655491534307, guid: 0eb8d0e2434f44a14b51ced3f9086349, type: 3}
       Difficulty: 1
       theme: Default
@@ -2682,11 +2674,7 @@ MonoBehaviour:
     - LevelObject: {fileID: 3076251655491534307, guid: 346afe5c299e14929b036e395bedb3ca, type: 3}
       Difficulty: 2
       theme: Default
-      sizeW: 63
-    - LevelObject: {fileID: 3076251655491534307, guid: e41ccca62aacf774990e6fe007695745, type: 3}
-      Difficulty: 3
-      theme: Default
-      sizeW: 26
+      sizeW: 69
     - LevelObject: {fileID: 3076251655491534307, guid: cf81c5a0c553743aa9e15d0436a0b25c, type: 3}
       Difficulty: 3
       theme: Default
@@ -2707,10 +2695,6 @@ MonoBehaviour:
       Difficulty: 3
       theme: Default
       sizeW: 17
-    - LevelObject: {fileID: 3076251655491534307, guid: 9a47b85fc8c824568927a9a3a07310bd, type: 3}
-      Difficulty: 3
-      theme: Default
-      sizeW: 52
     - LevelObject: {fileID: 3076251655491534307, guid: 030db49ae01a14a3282bba5d53e4d7ff, type: 3}
       Difficulty: 3
       theme: Default
@@ -2727,6 +2711,38 @@ MonoBehaviour:
       Difficulty: 4
       theme: Default
       sizeW: 22
+    - LevelObject: {fileID: 3076251655491534307, guid: cf2d8f04665af467886743049634f8ba, type: 3}
+      Difficulty: 0
+      theme: Default
+      sizeW: 31
+    - LevelObject: {fileID: 3076251655491534307, guid: cf2d8f04665af467886743049634f8ba, type: 3}
+      Difficulty: 3
+      theme: Default
+      sizeW: 31
+    - LevelObject: {fileID: 3076251655491534307, guid: e41ccca62aacf774990e6fe007695745, type: 3}
+      Difficulty: 3
+      theme: Default
+      sizeW: 26
+    - LevelObject: {fileID: 3076251655491534307, guid: e41ccca62aacf774990e6fe007695745, type: 3}
+      Difficulty: 4
+      theme: Default
+      sizeW: 26
+    - LevelObject: {fileID: 3076251655491534307, guid: 9a47b85fc8c824568927a9a3a07310bd, type: 3}
+      Difficulty: 3
+      theme: Default
+      sizeW: 52
+    - LevelObject: {fileID: 3076251655491534307, guid: 9a47b85fc8c824568927a9a3a07310bd, type: 3}
+      Difficulty: 5
+      theme: Default
+      sizeW: 52
+    - LevelObject: {fileID: 3076251655491534307, guid: a20a4f7d41568c1489240e9594508a97, type: 3}
+      Difficulty: 1
+      theme: Default
+      sizeW: 10
+    - LevelObject: {fileID: 3076251655491534307, guid: a20a4f7d41568c1489240e9594508a97, type: 3}
+      Difficulty: 4
+      theme: Default
+      sizeW: 10
   Player: {fileID: 10214571}
   Camera: {fileID: 94117268}
   difficulties:
