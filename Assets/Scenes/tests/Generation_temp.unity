@@ -2639,10 +2639,6 @@ MonoBehaviour:
       Difficulty: 0
       theme: Default
       sizeW: 31
-    - LevelObject: {fileID: 3076251655491534307, guid: ee722fd9608884c1a9a9bc7a9dafd103, type: 3}
-      Difficulty: 0
-      theme: Default
-      sizeW: 10
     - LevelObject: {fileID: 3076251655491534307, guid: 2fb884748f23a4f38a5a158115cf779f, type: 3}
       Difficulty: 0
       theme: Default
@@ -2691,6 +2687,26 @@ MonoBehaviour:
       Difficulty: 3
       theme: Default
       sizeW: 26
+    - LevelObject: {fileID: 3076251655491534307, guid: 3481c1689f06d4446842e6a2eb978e1a, type: 3}
+      Difficulty: 3
+      theme: Default
+      sizeW: 95
+    - LevelObject: {fileID: 3076251655491534307, guid: cf81c5a0c553743aa9e15d0436a0b25c, type: 3}
+      Difficulty: 3
+      theme: Default
+      sizeW: 10
+    - LevelObject: {fileID: 3076251655491534307, guid: ee722fd9608884c1a9a9bc7a9dafd103, type: 3}
+      Difficulty: 0
+      theme: Default
+      sizeW: 10
+    - LevelObject: {fileID: 3076251655491534307, guid: ee722fd9608884c1a9a9bc7a9dafd103, type: 3}
+      Difficulty: 1
+      theme: Default
+      sizeW: 10
+    - LevelObject: {fileID: 3076251655491534307, guid: ee722fd9608884c1a9a9bc7a9dafd103, type: 3}
+      Difficulty: 2
+      theme: Default
+      sizeW: 10
   Player: {fileID: 10214571}
   Camera: {fileID: 94117268}
   difficulties:
